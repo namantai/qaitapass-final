@@ -255,7 +255,7 @@ The video demonstrates:
 5. Role-based security checks
 6. Automated test results
 
-Duration: 3 minutes maximum.
+Duration: 2 minutes maximum.
 
 ## 9. Team Members
 
