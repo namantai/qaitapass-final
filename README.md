@@ -244,7 +244,7 @@ Unit tests and live Fabric integration are separate forms of verification. These
 
 ## 8. Demo Video
 
-**Final demonstration:** [[Add Google Drive video link here](https://drive.google.com/file/d/14XY3v568u43K5_BzIEFYwAjVZlRQEtAG/view?usp=sharing)]
+**Final demonstration:** [Watch QaitaPass Demo Video](https://drive.google.com/file/d/14XY3v568u43K5_BzIEFYwAjVZlRQEtAG/view?usp=sharing)
 
 The video demonstrates:
 
