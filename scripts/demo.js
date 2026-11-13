@@ -1,0 +1,11 @@
+import { LocalNetwork, demoDigest } from '../src/network.js';
+const n = new LocalNetwork();
+console.log('QaitaPass educational prototype — fake organisations / no real funds');
+console.log('LOCAL DEPLOY | new local permissioned chain | genesis block #0');
+console.log('STEP 1 registerDevice  ', n.submit('REFURB','issuePassport', {deviceId:'DEV-DEMO-001',digest:demoDigest('synthetic-intake-test')}));
+console.log('STEP 2 addDiagnostic  ', n.submit('LAB','addDiagnostic',{deviceId:'DEV-DEMO-001',digest:demoDigest('synthetic-battery-result')}));
+console.log('STEP 3 appendRepair   ', n.submit('REPAIR','appendRepair',{deviceId:'DEV-DEMO-001',digest:demoDigest('synthetic-ssd-replacement')}));
+console.log('STEP 4 verifyHistory  ', n.read('DEV-DEMO-001'));
+console.log('STEP 5 flagDispute    ', n.submit('REVIEW','flagDispute',{deviceId:'DEV-DEMO-001',reasonCode:'REVIEW_REQUEST'}));
+console.log('STEP 6 final status   ', n.read('DEV-DEMO-001'));
+console.log('BLOCKCHAIN INTEGRITY  ', n.chainStatus());

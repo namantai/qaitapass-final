@@ -1,0 +1,117 @@
+
+> qaitapass-educational-prototype@1.0.0 demo
+> node scripts/demo.js
+
+QaitaPass educational prototype — fake organisations / no real funds
+LOCAL DEPLOY | new local permissioned chain | genesis block #0
+STEP 1 registerDevice   {
+  height: 1,
+  index: 0,
+  type: 'DIAGNOSTIC',
+  digest: '986be2622f6071fae3157cd488e1d3a114afbb1587806d217af4d79d5ee3be18',
+  issuer: 'DemoRefurb-A',
+  supersedes: null,
+  status: 'ACTIVE'
+}
+STEP 2 addDiagnostic   {
+  height: 2,
+  index: 1,
+  type: 'DIAGNOSTIC',
+  digest: '793491abc486accd6d2958f25f34756f212a17d0123f0ac76c458bdf19f4955e',
+  issuer: 'DemoLab-C',
+  supersedes: 0,
+  status: 'ACTIVE'
+}
+STEP 3 appendRepair    {
+  height: 3,
+  index: 2,
+  type: 'REPAIR',
+  digest: '18fab6ba26828fed9d1f1a73bfd08eab5df4b76600d4cfee2815908f5988700a',
+  issuer: 'DemoRepair-B',
+  supersedes: 1,
+  status: 'ACTIVE'
+}
+STEP 4 verifyHistory   {
+  deviceId: 'DEV-DEMO-001',
+  chronological: true,
+  disputed: false,
+  events: [
+    {
+      index: 0,
+      type: 'DIAGNOSTIC',
+      digest: '986be2622f6071fae3157cd488e1d3a114afbb1587806d217af4d79d5ee3be18',
+      issuer: 'DemoRefurb-A',
+      supersedes: null,
+      status: 'ACTIVE'
+    },
+    {
+      index: 1,
+      type: 'DIAGNOSTIC',
+      digest: '793491abc486accd6d2958f25f34756f212a17d0123f0ac76c458bdf19f4955e',
+      issuer: 'DemoLab-C',
+      supersedes: 0,
+      status: 'ACTIVE'
+    },
+    {
+      index: 2,
+      type: 'REPAIR',
+      digest: '18fab6ba26828fed9d1f1a73bfd08eab5df4b76600d4cfee2815908f5988700a',
+      issuer: 'DemoRepair-B',
+      supersedes: 1,
+      status: 'ACTIVE'
+    }
+  ]
+}
+STEP 5 flagDispute     {
+  height: 4,
+  index: 3,
+  type: 'DISPUTE',
+  digest: null,
+  issuer: 'DemoReviewer-D',
+  supersedes: 2,
+  status: 'REVIEW_REQUEST'
+}
+STEP 6 final status    {
+  deviceId: 'DEV-DEMO-001',
+  chronological: true,
+  disputed: true,
+  events: [
+    {
+      index: 0,
+      type: 'DIAGNOSTIC',
+      digest: '986be2622f6071fae3157cd488e1d3a114afbb1587806d217af4d79d5ee3be18',
+      issuer: 'DemoRefurb-A',
+      supersedes: null,
+      status: 'ACTIVE'
+    },
+    {
+      index: 1,
+      type: 'DIAGNOSTIC',
+      digest: '793491abc486accd6d2958f25f34756f212a17d0123f0ac76c458bdf19f4955e',
+      issuer: 'DemoLab-C',
+      supersedes: 0,
+      status: 'ACTIVE'
+    },
+    {
+      index: 2,
+      type: 'REPAIR',
+      digest: '18fab6ba26828fed9d1f1a73bfd08eab5df4b76600d4cfee2815908f5988700a',
+      issuer: 'DemoRepair-B',
+      supersedes: 1,
+      status: 'ACTIVE'
+    },
+    {
+      index: 3,
+      type: 'DISPUTE',
+      digest: null,
+      issuer: 'DemoReviewer-D',
+      supersedes: 2,
+      status: 'REVIEW_REQUEST'
+    }
+  ]
+}
+BLOCKCHAIN INTEGRITY   {
+  blocks: 5,
+  valid: true,
+  mechanism: 'single-authority local development ledger'
+}

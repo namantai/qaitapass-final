@@ -1,0 +1,86 @@
+
+> qaitapass-educational-prototype@1.0.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: 01 authorised refurbisher issues one pseudonymous passport
+ok 1 - 01 authorised refurbisher issues one pseudonymous passport
+  ---
+  duration_ms: 6.588504
+  type: 'test'
+  ...
+# Subtest: 02 an unapproved role cannot issue a passport
+ok 2 - 02 an unapproved role cannot issue a passport
+  ---
+  duration_ms: 3.720042
+  type: 'test'
+  ...
+# Subtest: 03 duplicate passport is rejected
+ok 3 - 03 duplicate passport is rejected
+  ---
+  duration_ms: 1.449828
+  type: 'test'
+  ...
+# Subtest: 04 authorised diagnostic append preserves the original event
+ok 4 - 04 authorised diagnostic append preserves the original event
+  ---
+  duration_ms: 1.534894
+  type: 'test'
+  ...
+# Subtest: 05 authorised repair is appended without deleting prior history
+ok 5 - 05 authorised repair is appended without deleting prior history
+  ---
+  duration_ms: 2.732582
+  type: 'test'
+  ...
+# Subtest: 06 an unapproved role cannot write a repair event
+ok 6 - 06 an unapproved role cannot write a repair event
+  ---
+  duration_ms: 0.950095
+  type: 'test'
+  ...
+# Subtest: 07 reviewer flags a dispute and ordinary user cannot
+ok 7 - 07 reviewer flags a dispute and ordinary user cannot
+  ---
+  duration_ms: 1.212991
+  type: 'test'
+  ...
+# Subtest: 08 invalid document digest is rejected
+ok 8 - 08 invalid document digest is rejected
+  ---
+  duration_ms: 0.59993
+  type: 'test'
+  ...
+# Subtest: 09 fake transaction signature is rejected before recording a block
+ok 9 - 09 fake transaction signature is rejected before recording a block
+  ---
+  duration_ms: 0.997374
+  type: 'test'
+  ...
+# Subtest: 10 chain verification detects stored-block tampering
+ok 10 - 10 chain verification detects stored-block tampering
+  ---
+  duration_ms: 1.149468
+  type: 'test'
+  ...
+# Subtest: 11 missing passport fails without chain updates
+ok 11 - 11 missing passport fails without chain updates
+  ---
+  duration_ms: 0.703673
+  type: 'test'
+  ...
+# Subtest: 12 invalid dispute code cannot be recorded
+ok 12 - 12 invalid dispute code cannot be recorded
+  ---
+  duration_ms: 0.956544
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 128.785305

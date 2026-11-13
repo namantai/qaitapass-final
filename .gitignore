@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Logs and generated files
+*.log
+coverage/
+.DS_Store
+
+# Fabric local network artifacts
+organizations/
+channel-artifacts/
+system-genesis-block/
